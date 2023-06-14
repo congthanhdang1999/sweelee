@@ -39,7 +39,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
     public function roles(){
-        return $this->belongstoMany('App\Role','role_user','user_id','role_id');
+        return $this->belongstoMany('App\Role','user_role','user_id','role_id');
     }
     public function information() {
         return $this->hasMany('App\Information');

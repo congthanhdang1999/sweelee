@@ -8,6 +8,6 @@ class Role extends Model
 {
     protected $guarded = [];
     public function users(){
-        return $this->belongstoMany('App\User','role_user','role_id','user_id');
+        return $this->belongstoMany('App\User','user_role','role_id','user_id');
     }
 }
