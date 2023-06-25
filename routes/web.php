@@ -88,7 +88,7 @@ Route::get('admin/slider/delete/{id}', 'AdminSliderController@delete')->name('sl
 Route::get('/', 'UserHomeController@index')->name('home');
 Route::get('detail/list/{id}','UserProductController@detailProduct')->name('detail.product');
 
-//user profile 
+//user profile
 Route::get('profile', 'UserProfileController@index')->name('profile.index');
 Route::get('profile/store', 'UserProfileController@store')->name('profile.store');
 Route::post('profile/update', 'UserProfileController@update')->name('profile.update');
@@ -117,5 +117,13 @@ Route::get('cart/update', 'UserCartController@update')->name('cart.update');
 Route::get('cart/ajax', 'UserCartController@ajax')->name('cart.ajax');
 Route::get('cart/destroy', 'UserCartController@destroy')->name('cart.destroy');
 
+//permission
+Route::get('admin/permission/add', 'PermissionController@add')->name('permission.add');
+Route::get('admin/permission/delete/{id}', 'PermissionController@delete')->name('permission.delete');
 
+Route::get('admin/permission/create', 'PermissionController@create')->name('permission.create');
+Route::post('admin/permission/store', 'PermissionController@store')->name('permission.store');
 
+//roles
+Route::get('admin/role/add', 'RoleController@add')->name('role.add');
+Route::get('admin/role/index', 'RoleController@index')->name('role.index');
